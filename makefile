@@ -7,10 +7,10 @@ PREFIX 	?= /usr/local
 all:	collatz
 
 collatz:	collatz.c collatz.g.c collatz.g.h collatz.l.c collatz.l.h
-	cc -std=c17 -o $@ collatz.c collatz.g.c collatz.l.c
+	c99 -o $@ collatz.c collatz.g.c collatz.l.c
 
 collatz.l.c collatz.l.h:	collatz.l
-	lex -D_POSIX_C_SOURCE=202405L -o collatz.l.c collatz.l
+	lex -D_POSIX_C_SOURCE=200809L -o collatz.l.c collatz.l
 
 collatz.g.c collatz.g.h:	collatz.g
 	gengetopt <collatz.g
