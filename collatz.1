@@ -1,4 +1,4 @@
-.TH COLLATZ "1" "January 2026" "collatz v2.0.0" "User Commands"
+.TH COLLATZ "1" "June 2026" "collatz v2.0.0" "User Commands"
 .SH NAME
 collatz \- print Collatz sequences
 .SH SYNOPSIS
@@ -13,11 +13,11 @@ is a Collatz sequence printer.
 The Collatz Conjecture is an unsolved problem in mathematics.
 The sequence is defined by a piecewise function: if 2|x_n, then x_n+1 = x_n/2; else x_n+1 = 3*x_n+1.
 The Conjecture is that, upon repeated iterations of this sequence, all numbers will return to the 1->4->2->1 loop.
-.TP
-While this program is unable to check large numbers performantly (past 10^25 has been checked in direct searchers), it does make for an interesting "toy."
-Given a TARGET, print the sequence starting from the next number in the sequence.
-If multiple TARGETs are given, they will be printed without any separation.
-.TP
+.PP
+While this program is unable to check large numbers performantly, and so is not useful for trying to test the Conjecture (direct searches have checked up to 10^25), it does make for an interesting toy.
+.PP
+Given a \fITARGET\fR, print the sequence starting from the next number in the sequence.
+If multiple \fITARGET\fRs are given, they will be printed without any separation.
 If no \fITARGET\fRs are specified on the command line, read them from standard input.
 .SH OPTIONS
 Mandatory options to long options are mandatory for short options too.

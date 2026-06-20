@@ -22,13 +22,13 @@ clean:
 
 source:
 	rm -f collatz_source.tar.gz
-	tar -cf collatz_source.tar collatz.c collatz.g collatz.l collatz.1 makefile
+	tar -cf collatz_source.tar collatz.c collatz.g collatz.l collatz.1 makefile COPYING
 	gzip collatz_source.tar
 
 release:	collatz
 	rm -f collatz.tar.gz
 	sed 6,33d makefile | sed '2c .PHONY:	install uninstall'> Makefile
-	tar -cf poly.tar poly poly.c poly.g poly.l poly.1 Makefile
+	tar -cf poly.tar poly poly.c poly.g poly.l poly.1 Makefile COPYING
 	gzip collatz.tar
 
 install:	collatz
